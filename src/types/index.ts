@@ -45,6 +45,14 @@ export interface SortingStep extends AlgorithmStep {
     comparing?: [number, number];
     swapping?: [number, number];
     sorted?: number[];
+    splitting?: {
+      left: { indices: number[]; values: number[] };
+      right: { indices: number[]; values: number[] };
+    };
+    merging?: {
+      left: { indices: number[]; values: number[] };
+      right: { indices: number[]; values: number[] };
+    };
   };
 }
 
