@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowLeft, Info } from 'lucide-react'
 import { Algorithm, AlgorithmState, AnimationSpeed } from '../types'
 import AlgorithmControls from './AlgorithmControls'
+import MergeSortVisualizer from './algorithms/MergeSortVisualizer'
 import BubbleSortVisualizer from './algorithms/BubbleSortVisualizer'
 import BinarySearchVisualizer from './algorithms/BinarySearchVisualizer'
 
@@ -66,6 +67,8 @@ const AlgorithmVisualizer: React.FC<AlgorithmVisualizerProps> = ({ algorithm, on
     switch (algorithm.id) {
       case 'bubble-sort':
         return <BubbleSortVisualizer {...commonProps} />
+      case 'merge-sort':
+        return <MergeSortVisualizer {...commonProps} />
       case 'binary-search':
         return <BinarySearchVisualizer {...commonProps} />
       default:
